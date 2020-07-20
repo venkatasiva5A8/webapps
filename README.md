@@ -49,7 +49,7 @@ $cd Image_Builder/src
 
 step 3: enter access key and secret key
 
-vi variables.json
+$vi variables.json
 
 {
 
@@ -63,11 +63,11 @@ vi variables.json
 
 Step 4: validate syntax
 
-packer validate -var-file=variables.json builders.json
+$packer validate -var-file=variables.json builders.json
 
 Step 5: Build custome AMI
 
-packer build -var-file=variables.json builders.json
+$packer build -var-file=variables.json builders.json
 
 
 
