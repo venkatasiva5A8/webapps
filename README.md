@@ -28,7 +28,8 @@ wget https://releases.hashicorp.com/terraform/0.12.24/terraform_0.12.24_linux_am
 yum install ansible -y
 
 
-# Phase 1: Packer
+# Phase 1: Build custome AMI image using "Packer"
+
 step 1: clone repo
 
 $git clone https://github.com/krishnamaram2/Image_Builder.git
@@ -64,10 +65,12 @@ packer build -var-file=variables.json builders.json
 
 
 
-Phase 2: Terraform
+# Phase 2: Build infrastructure using "Terraform"
 
 
 
 
 
-Phase 3: Ansible
+# Phase 3: Installing and configure using "Ansible"
+
+
