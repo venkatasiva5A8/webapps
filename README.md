@@ -1,5 +1,5 @@
 # webapps
-THis project implemented to touch and feel 3-tier webapp communication flow 
+This project implemented to touch and feel 3-tier webapp communication flow 
 
 Phase 0: lauch ec2 instance "Sandbox"
 
