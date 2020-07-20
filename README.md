@@ -108,11 +108,11 @@ secret_key = ""
 
 region = "us-east-1"
 
-bucket = "<mybucket>"
+bucket = "<<mybucket>>"
 
-key = "<myfile>"
+key = "<<myfile>>"
 
-dynamodb_table = "<mytable>"
+dynamodb_table = "<<mytable>>"
 
 }
 
