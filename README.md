@@ -3,7 +3,9 @@ This project implemented to touch and feel 3-tier webapp communication flow
 
 # Phase 0: lauch ec2 instance "Sandbox"
 
-$vi /etc/yum.repos.d/ansible.repo
+step 1: repo file
+
+$vi ansible.repo
 
 [Ansible]
 
@@ -15,6 +17,8 @@ enabled = 1
 
 gpgcheck = 0
 
+step 2: install packages
+
 $vi setup.sh
 
 yum update -y && yum upgrade -y
@@ -25,8 +29,13 @@ wget https://releases.hashicorp.com/packer/1.5.5/packer_1.5.5_linux_amd64.zip &&
 
 wget https://releases.hashicorp.com/terraform/0.12.24/terraform_0.12.24_linux_amd64.zip && unzip terraform_0.12.24_linux_amd64.zip && mv terraform /bin/ && rm -rf ./terraform* 
 
+sudo cp ./ansible.repo /etc/yum.repos.d/
+
 yum install ansible -y
 
+step 3: run script
+
+$sudo sh setup.sh 
 
 # Phase 1: Build custome AMI image using "Packer"
 
