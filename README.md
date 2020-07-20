@@ -1,7 +1,9 @@
 # webapps
 This project implemented to touch and feel 3-tier webapp communication flow 
 
-# Phase 0: lauch ec2 instance "Sandbox"
+# Phase 0: lauch ec2 instance and named as "Sandbox"
+
+step 0: login to sandbox instance
 
 step 1: repo file
 
