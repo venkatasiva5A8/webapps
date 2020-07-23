@@ -146,33 +146,9 @@ $terraform apply -var-file=config.json .
 
 # Phase 3: Installing and configure using "Ansible"
 
-Set up
-=============================
 
-Step 1: switch to root user
+Step 0: add public keys
 
-sudo su -l
-
-passwd root
-
-step 2: enable password authentication
-
-vi /etc/ssh/sshd_config
-
-PasswordAuthentication yes
-
-permitroorlogin yes
-
-systemctl restart sshd
-
-step 3: generate ssh keys for key based authentication
-
-ssh-keygen
-
-ssh-copy-id root@localhost
-
-Execution Flow
-======================
 
 step 1: clone repo
 
