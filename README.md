@@ -31,7 +31,7 @@ wget https://releases.hashicorp.com/packer/1.5.5/packer_1.5.5_linux_amd64.zip &&
 
 wget https://releases.hashicorp.com/terraform/0.12.24/terraform_0.12.24_linux_amd64.zip && unzip terraform_0.12.24_linux_amd64.zip && mv terraform /bin/ && rm -rf ./terraform* 
 
-sudo cp ./ansible.repo /etc/yum.repos.d/
+sudo mv ./ansible.repo /etc/yum.repos.d/
 
 yum install ansible -y
 
