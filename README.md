@@ -35,6 +35,8 @@ sudo mv ./ansible.repo /etc/yum.repos.d/
 
 yum install ansible -y
 
+rm -rf ./setup.sh
+
 step 3: run script
 
 $sudo sh setup.sh 
