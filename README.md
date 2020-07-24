@@ -149,18 +149,22 @@ $terraform apply -var-file=config.json .
 # Phase 3: Installing and configure using "Ansible"
 
 
-Step 0: add public keys
+Step 1: add public keys
+$vi ssh-keys.sh
+ssh-keygen -q -t rsa -N '' -f /home/centos/.ssh/id_rsa <<<y 2>&1 >/dev/null
+cat /home/centos/.ssh/id_rsa.pub >> /home/centos/.ssh/authorized_keys
+ssh -o StrictHostKeyChecking=no centos@localhost
 
+$sudo ssh-keys.sh
 
-step 1: clone repo
+step 2: executing playbooks
 
-$git clone https://github.com/krishnamaram2/Configuration_Manager.git
+$vi playbook.sh
 
-Step 2:
+git clone https://github.com/krishnamaram2/Configuration_Manager.git
+cd Configuration_Manager/src/plays
+ansible-playbook -i hosts webapps.yml
 
-$cd Configuration_Manager/src/plays
-
-$ansible-playbook -i hosts webapp.yml
-
+$sudo sh playbook.sh
 
 
